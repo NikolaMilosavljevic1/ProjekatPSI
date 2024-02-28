@@ -21,6 +21,7 @@
 		5.6.1 Ocenjivanje slicice
 		5.6.2 Kupovina slicice
 		5.6.3 Dodavanje u wishlist
+		5.6.4 Pregled najpopularnijih slicica
 6. Pretpostavke i ogranicenja
 7. Kvalitet
 8. Nefunkcionalni zahtevi
