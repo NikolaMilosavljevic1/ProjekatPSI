@@ -1,9 +1,16 @@
 	PROJEKAT KONCEPT:
-1. Uvod :)
+1. Uvod
 	1.1 Rezime
 	1.2 Namena dokumenta, i ciljna grupa
 2. Opis problema
-
+3. Kategorije korisnika
+	3.1 Gost sajta
+	3.2 Registrovani korisnik
+	3.3 Moderator
+	3.4 Administrator
+4. Opis proizvoda
+	4.1 Pregled arhitekture sistema
+	4.2 Pregled karakteristika
 5. Funkcionalni zahtevi
 	5.1 Registracija
 	5.2 Autorizacija moderatora
