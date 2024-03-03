@@ -1,0 +1,164 @@
+﻿Elektrotehnički fakultet u Beogradu
+Principi Softverskog Inženjerstva(SI3PSI)
+
+
+
+
+
+
+
+
+Projektni zadatak
+POKE PRODAVNICA
+
+
+
+
+
+
+												
+
+
+
+	PSIduck
+
+
+
+Sadržaj
+1.	Uvod	4
+1.1 Rezime	4
+1.2  Namena dokumenta i ciljne grupe	4
+2.	Opis problema	4
+3.	Kategorija korisnika	5
+3.1 Gost	5
+3.2 Registrovan korisnik	5
+3.3 Moderator	5
+3.4 Administrator	5
+4. Opis proizvoda	5
+4.1 Pregled arhitekture sistema	5
+4.2 Pregled karakteristika	5
+5.	Funkcionalni zahtevi	6
+5.1	Registracija korisnika	6
+5.2	Autorizacija moderatora I registrovanih korisnika	6
+5.3	Administriranje sistema	6
+5.4	Dodavanje i uklanjanje sličica	6
+5.5	Pregled sličica	6
+6.	Pretpostavke i ograničenja	7
+7.	Kvalitet	7
+8.	Nefunkcionalni zahtevi	7
+8.1	Sistemski zahtevi	7
+8.2	Ostali zahtevi	8
+9.	Zahtevi za korisničkom dokumentacijom	8
+9.1	Uputstva za korišćenje sajta	8
+9.2	Označavanje	8
+10. Plan i prioriteti	8
+
+
+
+
+
+ISTORIJA IZMENA
+
+VerzijaDatumOpisAutori1.003.03.2024.Inicijalna verzijaNikola Milosavljević
+Mihajlo Milojević
+Aleksandar Vučković
+Vuk Davidović
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Uvod
+  1.1 Rezime
+Projekat “Poke prodavnica” je deo praktične nastave na predmetu Principi softverskog inženjerstva. Veb stranica je namenjena svim ljubiteljima Pokemona, pružajući korisnicima usluge pregleda, kupovine Pokemon kartica i još puno toga.
+   1.2  Namena dokumenta i ciljne grupe 
+Ovaj dokument služi da definiše namenu aplikacije, funkcionalnosti koje ona pruža, i druge zahteve koji su traženi u projektnom zadatku. Dokument je namenjen svim članovima tima.
+2. Opis problema
+U ovom odeljku opisan je problem koji aplikacija treba da reši.
+Gosti Poke prodavnice imaju mogućnost da pregledaju različite vrste Pokemon kartica, kao i da ih ocenjuju. Registrovani korisnici pored nabrojanih funkcionalnosti, imaju mogućnost da kupe kartice, ili da ih dodaju u listu želja. Moderator se brine o ažurnosti sajta, ima mogućnost dodavanja i uklanjanja kartica iz korpe. Administrator vodi računa o autorizaciji korisnika. Administrator takodje ima sposobnost da dodeli registrovanom korisniku poziciju moderatora. Na sajtu je takođe omogućen pregled svim korisnicima sortirane liste Pokemon kartica po opadajućem, odnosno rastućem poretku.
+3. Kategorija korisnika
+     3.1 Gost
+Gost sajta može da pregleda kartice dostupne u prodavnici i da im daje ocenu. Gosti imaju mogućnost i da se registruju u sistem.
+     3.2 Registrovan korisnik
+Registrovani korisnici mogu da se loguju u sistem tako što ukucaju svoje korisničko ime i šifru u login formi. Oni mogu da kupuju kartice i da ih dodaju u wishlist-u.
+3.3 Moderator
+Moderator vodi računa o aktuelnosti prodavnice. On može da nabavlja kartice, kao i da ih i uklanja iz prodavnice kada više nisu nisu dostupne. 
+3.4 Administrator
+Administrator ima mogućnost da dodeli nekom registrovanom korisniku ulogu moderatora, kao i da mu je ukloni. 
+4. Opis proizvoda
+U ovoj sekciji navedena je osnovna arhitektura sistema kao i neke najbitnije karakteristike koje sajt poseduje.
+     4.1 Pregled arhitekture sistema
+Poke prodavnica je dinamički Internet sajt, smešten na serveru koji podržava Django radni okvir i Ajax tehnike. U okviru projekta je implementiran i server na kome je baza podataka MySql u kojem se čuvaju kako različite vrste sličica, tako i podaci o nalozima moderatora, registrovanih korisnika i njihove šifre za pristup. Web server uz pomoć back-end realizacije, preko Django framework-a i pristupa bazi podataka kreira statički HTML (Front-end) kod koji mogu pregledati zainteresovani korisnici. 
+     4.2 Pregled karakteristika
+		
+Korist za korisnikaKarakteristika koja je obezbedjujeRaspoloživost sistema, neograničen pristup sistemuSistem je dostupan u svakom trenutku, tako da korisnik može uvek, sa bilo kog računara da pristupi sajtu.Pristup sa bilo kog računara povezanog na InternetInterfejs zasnovan na Web browseru, HTMLu i JavaScript-u ne postavlja ograničenja na klijentskoj strani.Jednostvno korišćenje i navigiranje kroz sajtSajt nudi mogućnost korisniku da na jednom mestu pregleda sve dostupne sličice u prodavnici, kao i da ukoliko želi sortira sličice po oceni.Sigurnost i poverljivost informacijaPristup sajtu štiti se autorizacijom korisnika. Svi podaci o autorizaciji korisnika se čuvaju u bazi podataka.
+
+5. Funkcionalni zahtevi
+U ovom odeljku opisane su osnovne funkcionalnosti koje sistem obezbedjuje različitim kategorijama korisnika.
+5.1 Registracija korisnika
+Ukoliko korisnik nema svoj nalog, može ga kreirati unošenjem ličnih podataka. Nakon uspešne registracije korisnika njegovi podaci će biti upisani u bazu podataka na osnovu čega će moći kasnije da pristupa sajtu.
+5.2 Autorizacija moderatora i registrovanih korisnika
+Da bi se moderator i registrovani korisnici uspešno autorizovali na sistem, moraju da unesu svoje korisničko ime i šifru koji se poklapaju sa podacima u bazi podataka. Nakon uspešnog logovanja u sistem, ovi korisnici imaju pristup svim funkcionalnostima koje odgovaraju vrsti korisnika kojoj pripadaju.
+5.3 Administriranje sistema
+Administrator sistema jedini poseduje lozinku za pristup interfejsu koji omogućava dodavanje novih i brisanje starih naloga moderatora i korisnika.
+5.4 Dodavanje i uklanjanje sličica
+Moderator i administrator sistema jedini imaju mogućnost dodavanja i uklanjanja  sličica. Prilikom dodavanja, moguće je dodavanje već postojeće , ili nove sličice na sajt. Prilikom dodavanja nove sličice obavezno je da se navede ime, slika i cena sličice. 
+Uklanjanje sličica se vrši time što se sličica zasivi i time se izbacuje iz prodavnice.
+5.5 Pregled sličica
+Svi korisnici imaju mogućnost pregleda teksta, slike i cene sličice. Prelaz mišem preko odredjene sličice čini da se slika uveliča i na taj način je korisnicima pružena bolja vidljivost svih detalja sličice. 
+5.5.1 Ocenjivanje sličice
+Svi korisnici imaju mogućnost davanja ocene sličici.
+5.5.2 Sortiran pregled
+Svi korisnici imaju mogućnost sortiranog pregleda sličica prema oceni, azbučnom redosledu, ili prema ceni. Sortiranje je moguće obaviti prema opadajućem ili neopadajućem poretku.
+5.5.3 Kupovina sličice
+Svi registrovani korisnici imaju mogućnost kupovine sličica. Kupovina se obavlja tako što se klikne na sličicu i izabere opcija kupovine sličice. Time se kupljena sličica izbacuje iz prodavnice I postavlja u korpu koja je korisnicima vidljiva na sajtu. 
+5.5.4 Dodavanje slike u listu želja
+Registrovani korisnici mogu da označe koje kartice bi potencijalno kupili u budućnosti, dodavanjem istih u listu želja. Sama lista želja korisnika je dostupna I vidljiva samo njemu na sajtu.
+5.5.5 Promena cene sličice
+Moderator i administrator mogu da promene cene sličica, kao i da dodaju popuste koji važe do odredjenog vremena. 
+
+6. Pretpostavke i ograničenja
+Sistem treba isprojektovati tako da navigiranje kroz sistem bude jednostavno, pružajući korisniku jednostavan i vizuelno lep API. Potrebno je pružiti korisnicima što bolji pregled sličica, a i učiniti njihovo dodavanje i uklanjanje jednostavnim. Treba obezbediti sigurno čuvanje podataka vezanih za autorizaciju korisnika. 
+7. Kvalitet
+Potrebno je izvršiti funkcionalno (black-box) testiranje svih funkcija sistema. Važno je testirati ekstremne slučajeve upotrebe sistema, na primer: prepoterećenje sajta, pokušaj pregleda sličica sortiranih po oceni, za vreme unošenja ocena od strane drugih korisnika itd.
+8. Nefunkcionalni zahtevi
+Sistem se sastoji iz serverske i korisničke komponente. 
+8.1 Sistemski zahtevi
+Serverski deo može da se izvršava na bilo kom Web serveru koji podržava Django radni okvir i MySql bazu podataka. Neophodno je obezbediti kompatibilnost sa različitim Internet pregledačima (kao na primer: Mozilla Firefox, Internet Explorer itd.), kao i da izgled stranice ne odstupa bitno u odnosu na sam pregledač.
+8.2 Ostali zahtevi 
+Sistem treba da pruži zadovoljavajuće performance pri odzivu, kao i određenu vizuelnu dinamičnost stranice.
+9. Zahtevi za korisničkom dokumentacijom
+9.1 Uputstva za korišćenje sajta
+Dostupna su uputstva za dodavanje i uklanjanje, kao i promena cena sličica. Ova uputstva su namenjena za moderatora i administratora stranice.
+9.2 Označavanje
+Svaka stranica mora imati logo I naziv sajta. Potrebno je za svaku sličicu da bude označeno od strane kog korisnika je uneta sa njegovim korisničkim imenom.
+10. Plan i prioriteti
+Razvoj Poke prodavnice treba da se odvija iterativno. Inicijalna verzija trebalo bi da obuhvati minimalno sledeće funkcionalnosti:
+• Prijava na sistem
+• Pregled sličica 
+• Dodavanje i uklanjanje sličica 
+• Osnovne administratorske funkcionalnosti
+U kasnijim verzijama postoji mogućnost dodavanja:
+o opcije kupovine sličice preko drugih sajtova, poput Amazon-a, i Ebay-a. 
+o pregleda sličica po poretku sortiranom po tipu kojem pripadaju Pokemoni.
+o polja za pretragu, što bi doprinelo efikasnijem pretraživanju sajta.   
+
+
+
+
