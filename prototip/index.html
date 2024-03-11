@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeProdavnica</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom CSS */
+    .cart-popup {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      display: none; /* Hidden by default */
+      z-index: 999; /* Ensure it appears on top of other content */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="index.html">
+    <img src="primer slike\logo.png" class="navbar-icon" alt="Logo" style="width: 8%;"> <!-- Icon added beside the logo -->
+    PokeProdavnica
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Moj Nalog
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="wishlist.html">Lista Zelja</a>
+          <a class="dropdown-item" href="purchase_history.html">Istorija Kupovine</a>
+          <a class="dropdown-item" href="index.html">Izloguj se</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Logovanje</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="register.html">Registracija</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5">
+  <!-- Sorting Dropdown -->
+  <div class="row">
+    <div class="col-md-12 mb-3">
+      <div class="form-group">
+        <label for="sorting">Sortiraj po:</label>
+        <select class="form-control" id="sorting" style="width: 25%;">
+          <option value="nameasc">Ime (rastuce)</option>
+          <option value="namedesc">Ime (opadajuce)</option>
+          <option value="priceasc">Cena (rastuca)</option>
+          <option value="pricedesc">Cena (opadajuca)</option>
+          <option value="voteasc">Popularnost (rastuca)</option>
+          <option value="votedesc">Popularnost (opadajuca)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <!-- Sample Cards -->
+  <div class="row">
+    <!-- Sample Card 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <a href="card_details.html">
+        <img src="primer slike/SM35_EN_1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bulbasaur</h5>
+        </a>
+          <p class="card-text">Zeleni</p>
+          <p class="card-text">$10.00</p>
+          <div class="btn-group" role="group" aria-label="Card Actions">
+            <button type="button" class="btn btn-success">Lajkuj</button>
+            <button type="button" class="btn btn-danger">Dislajkuj</button>
+            <button type="button" class="btn btn-primary">Dodaj u listu zelja</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample Card 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <a href="card_noadmin.html">
+        <img src="primer slike/SWSH4_EN_83.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Wooper</h5>
+        </a>
+          <p class="card-text">Smesan pokemon lol</p>
+          <p class="card-text">$15.00</p>
+          <div class="btn-group" role="group" aria-label="Card Actions">
+            <button type="button" class="btn btn-success">Lajkuj</button>
+            <button type="button" class="btn btn-danger">Dislajkuj</button>
+            <button type="button" class="btn btn-primary">Dodaj u listu zelja</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sample Card 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <a href="card_noregister.html">
+        <img src="primer slike/XY1_EN_42.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pikachu</h5>
+        </a>
+          <p class="card-text">Elektricni pokemon</p>
+          <p class="card-text">$12.00</p>
+          <div class="btn-group" role="group" aria-label="Card Actions">
+            <button type="button" class="btn btn-success">Lajkuj</button>
+            <button type="button" class="btn btn-danger">Dislajkuj</button>
+            <button type="button" class="btn btn-primary">Dodaj u listu zelja</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Button for Most Popular Cards -->
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <a href="popular.html" class="btn btn-lg btn-danger">Najpopularnije karte!</a>
+    </div>
+    <a href="cart.html" class="btn btn-primary">Pregled korpe
+      <div class="shopping-cart">
+      <div class="cart-items">0</div>
+      <img src="https://img.icons8.com/ios/50/000000/shopping-cart.png"/>
+    </div>
+    </a>
+  </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

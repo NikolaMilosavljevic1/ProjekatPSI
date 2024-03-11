@@ -1,0 +1,53 @@
+/* Navbar */
+.navbar-brand {
+    cursor: pointer;
+  }
+  
+  /* Main Content */
+  .container {
+    min-height: calc(100vh - 80px); /* Adjusting for navbar height */
+  }
+  
+  /* Shopping Cart Popup */
+  .cart-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    z-index: 999; /* Ensure it appears on top of other content */
+  }
+  
+  .cart-items {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .navbar-icon {
+    margin-right: 5px; /* Adjust the margin as needed */
+  }
+
+  body{
+    background-image: url(https://api.wallpapers.ai/static/downloads/5504d043007346d5b59f028cd21d8365/upscaled/000000_336894884_kdpmpp2m15_PS7.5_Create_Pok_mon-inspired_desktop_wallpaper_a_scenic_landscape_with_rolling_hills,_lush_greenery,_and_pathways,_echoing_the_franchis_[upscaled].jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .card{
+    background-color: rgba(148,159,251,0.3);
+  }
+  /* Add more custom CSS as needed */
+  
