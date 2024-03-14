@@ -44,10 +44,12 @@
     background-image: url(https://api.wallpapers.ai/static/downloads/5504d043007346d5b59f028cd21d8365/upscaled/000000_336894884_kdpmpp2m15_PS7.5_Create_Pok_mon-inspired_desktop_wallpaper_a_scenic_landscape_with_rolling_hills,_lush_greenery,_and_pathways,_echoing_the_franchis_[upscaled].jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 
   .card{
-    background-color: rgba(148,159,251,0.3);
+    background-color: rgba(148,159,251,0.6);
+    font-size: larger;
   }
-  /* Add more custom CSS as needed */
+
   
