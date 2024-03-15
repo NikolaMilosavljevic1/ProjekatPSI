@@ -1,0 +1,319 @@
+<!-- Aleksandar Protic 2021/0365 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pharma &mdash; Colorlib Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/product.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="site-wrap">
+      <div class="site-navbar py-2">
+        <div class="search-wrap">
+          <div class="container">
+            <a href="#" class="search-close js-search-close"
+              ><span class="icon-close2"></span
+            ></a>
+            <form action="#" method="post">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search keyword and hit enter..."
+              />
+            </form>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="logo">
+              <div class="site-logo">
+                <a href="index.html" class="js-logo-clone"><img style="height:80px; margin-bottom:10px"src="images/logo_name.png"></a>
+              </div>
+            </div>
+            <div class="main-nav d-none d-lg-block">
+              <nav
+                class="site-navigation text-right text-md-center"
+                role="navigation"
+              >
+                <ul class="site-menu js-clone-nav d-none d-lg-block">
+                  <li><a href="index.html">Početna</a></li>
+                  <li class="active"><a href="shop.html">Online prodavnica</a></li>
+                  
+                  <li><a href="virtual-pharmacist.html">Virtuelni farmaceut</a></li>
+                  <li><a href="#" onclick="odluciLoyalty()">Loyalty ponude</a></li>
+                  <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="icons">
+              <a href="#" class="icons-btn d-inline-block js-search-open"
+                ><span class="icon-search"></span
+              ></a>
+              <a
+              href="#"
+              onclick="odluci()"
+                class="icons-btn d-inline-block user"
+                style="user-select: none"
+                ><img src="images/icons/user.svg"
+              /></a>
+              <a href="cart.html" class="icons-btn d-inline-block bag">
+                <span class="icon-shopping-bag"></span>
+                <span class="number" style="color:white">2</span>
+              </a>
+              <a
+                href="#"
+                class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"
+                ><span class="icon-menu"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-light py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mb-0">
+              <a href="index.html">Početna</a> <span class="mx-2 mb-0">/</span>
+              <strong class="text-black">Podsetnik</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section">
+        <div class="container">
+          <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Lek</th>
+                        <th>Vreme</th>
+                        <th>Količina</th>
+                        <th>Dani u sedmici</th>
+                        <th>Koliko često</th>
+                        <th scope="col" style="text-align: center;">Izbriši podsetnik</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>Brufen</td>
+                      <td>10:00</td>
+                      <td>1 tableta</td>
+                      <td>Ponedeljak,Sreda</td>
+                      <td>Nedeljno</td>
+                      <td style="display: flex; justify-content: center; vertical-align: middle;"> <!-- Center the content in the cell -->
+                          <!-- Close button with "x" icon -->
+                          <button type="button" class="close" aria-label="Close" style="margin: auto;">
+                              <span aria-hidden="true">&times;</span> <!-- "&times;" represents the "x" symbol -->
+                          </button>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>Amoksicilin</td>
+                        <td>12:00</td>
+                        <td>2 tablete</td>
+                        <td>/</td>
+                        <td>Dnevno</td>
+                        <td style="display: flex; justify-content: center; vertical-align: middle;"> <!-- Center the content in the cell -->
+                            <!-- Close button with "x" icon -->
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span> <!-- "&times;" represents the "x" symbol -->
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+                <h2 class="h3 mb-2 text-black">Postavi novi podsetnik</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <input type="text" class="form-control" style="width: 200px;" placeholder="Lek">
+            </div>
+          </div>
+            <div class="row mt-3">
+                <div class="col-md-2">
+                    <input type="time" id="timeInput" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <input type="text" class="form-control" placeholder="Količina">
+                </div>
+                <div class="col-md-2">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="daysDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dani u sedmici
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="daysDropdownButton">
+                            <a href="#" class="list-group-item list-group-item-action"><input type="checkbox" class="mr-2">Ponedeljak</a>
+                            <a href="#" class="list-group-item list-group-item-action"><input type="checkbox" class="mr-2">Utorak</a>
+                            <a href="#" class="list-group-item list-group-item-action"><input type="checkbox" class="mr-2">Sreda</a>
+                            <a href="#" class="list-group-item list-group-item-action"><input type="checkbox" class="mr-2">Četvrtak</a>
+                            <a href="#" class="list-group-item list-group-item-action"><input type="checkbox" class="mr-2">Petak</a>
+                            <a href="#" class="list-group-item list-group-item-action"><input type="checkbox" class="mr-2">Subota</a>
+                            <a href="#" class="list-group-item list-group-item-action"><input type="checkbox" class="mr-2">Nedelja</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="repeatDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Ponavljanje
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="repeatDropdownButton">
+                            <a class="dropdown-item" href="#" onclick="setRepeatValue('Dnevni')">Dnevni</a>
+                            <a class="dropdown-item" href="#" onclick="setRepeatValue('Nedeljni')">Nedeljni</a>
+                            <a class="dropdown-item" href="#" onclick="setRepeatValue('Mesečni')">Mesečni</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary">Postavi podsetnik</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      <script>
+        function selectItem(imageSrc, itemName) {
+            // Update dropdown button icon and text
+            $('#dropdownMenuButton').html(`<img src="${imageSrc}" alt="${itemName}" style="width: 30px; height: auto; margin-right: 5px;">${itemName}`);
+        }
+        function setRepeatValue(value) {
+        // Update the "Ponavljanje" dropdown button text and value
+        $('#repeatDropdownButton').text(value);
+        }
+      </script>
+      
+      <!--
+      <div
+        class="site-section bg-secondary bg-image"
+        style="background-image: url('images/bg_2.jpg')"
+      >
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <a
+                href="#"
+                class="banner-1 h-100 d-flex"
+                style="background-image: url('images/bg_1.jpg')"
+              >
+                <div class="banner-1-inner align-self-center">
+                  <h2>Pharma Products</h2>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae ex ad minus rem odio voluptatem.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <a
+                href="#"
+                class="banner-1 h-100 d-flex"
+                style="background-image: url('images/bg_2.jpg')"
+              >
+                <div class="banner-1-inner ml-auto align-self-center">
+                  <h2>Rated by Experts</h2>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Molestiae ex ad minus rem odio voluptatem.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+      <footer class="site-footer" style="background-color: #b8e2f1;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-6 mb-4 mb-lg-0">
+              <div class="block-7">
+                <h3 class="footer-heading mb-4">O nama</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+                  quae reiciendis distinctio voluptates sed dolorum excepturi
+                  iure eaque, aut unde.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-6" style="text-align: right;">
+              <div class="block-5 mb-5">
+                <h3 class="footer-heading mb-4">Kontakt informacije</h3>
+                <ul class="list-unstyled" >
+                  <li class="">
+                    Karamatina 21, Beograd, Srbija<br>
+                    Kičevska 12, Beograd, Srbija<br>
+                    Šumadijska 15, Beograd, Srbija
+                  </li>
+                  <li class=""> 
+                    <a href="tel://23923929210">011 1234 123</a>
+                  </li>
+                  <li class="">apoteka.nena@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="icon-heart" aria-hidden="true"></i> by
+                <a
+                  href="https://colorlib.com"
+                  target="_blank"
+                  class="text-black"
+                  >Colorlib</a
+                >
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
