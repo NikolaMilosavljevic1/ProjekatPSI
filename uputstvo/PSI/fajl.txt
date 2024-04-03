@@ -1,0 +1,3 @@
+Fajl: https://crete.etf.bg.ac.rs/tools/hooks/commit-msg
+Stavlja se u direktorijum .git/hooks
+Nakon toga komanda: chmod +x `git rev-parse --git-dir`/hooks/commit-msg
