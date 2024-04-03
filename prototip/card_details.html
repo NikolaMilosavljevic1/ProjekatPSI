@@ -60,23 +60,31 @@
       <h3>Bulbasaur</h3>
       <p>Zeleni pokemon haha xd</p>
       <div class="form-group">
+        <label for="quantity">Cena(RSD):</label>
+        <input type="number" class="form-control" id="sale" min="0" value="0" style="width: 10%;">
+      </div>
+      <button type="button" class="btn btn-primary" id="sale">Unesite novu cenu</button>
+      <div class="form-group">
         <label for="quantity">Popust(%):</label>
         <input type="number" class="form-control" id="sale" min="0" max="100" value="0" style="width: 10%;">
       </div>
       <button type="button" class="btn btn-primary" id="sale">Unesite popust</button>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-primary">Dodaj u korpu</button>
+        </div>
+      </div>
+      <br><br>
+      <div class="row">
+        <div class="col-sm-12">
+            <button type="button" class="btn btn-success">Dodaj u magacin</button>
+        </div>
+      </div>
       <br>
       <div class="row">
         <div class="col-sm-12">
-            <button type="button" class="btn btn-success">Dodaj u korpu</button>
-        </div>
-      </div>
-      <div class="container mt-5">
-        <!-- Buttons Container -->
-        <div class="btn-container">
-          <!-- Add Card Button -->
-          <button type="button" class="btn btn-primary">Dodaj u magacin</button>
-          <!-- Remove Card Button -->
-          <button type="button" class="btn btn-danger">Izbaci iz magacina</button>
+            <button type="button" class="btn btn-danger">Izbaci iz magacina</button>
         </div>
       </div>
     </div>

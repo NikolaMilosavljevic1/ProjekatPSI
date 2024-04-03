@@ -52,4 +52,10 @@
     font-size: larger;
   }
 
-  
+  .grayscale-img {
+    filter: grayscale(100%);
+    /* For older browsers */
+    -webkit-filter: grayscale(100%);
+    /* For Chrome, Safari, etc. */
+    transition: all 0.5s ease;
+}
